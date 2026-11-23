@@ -4,10 +4,15 @@ Página de links da Chapa Prisma: https://chapaprisma.github.io/links/
 
 ## Como editar
 
-- **Links:** ficam escritos direto no HTML do `index.html`, dentro de `<a class="destaque">` (o bloco amarelo) e dos dois `<section class="grupo">`. Para trocar um link, mude o `href`; para trocar o texto, mude o `<b>` e o `<span>` da linha.
-- **Carta-programa:** hoje é uma linha "em breve" (`<div class="item breve">`). Quando sair, troque o `<div>` por `<a class="item" href="LINK" data-conta="carta">` e apague o `<span class="selo">`.
-- **Propostas por tema:** ponha as imagens na pasta `propostas/` (`rds.png`, `tecnologia.png`, `negocios.png`, `social.png`). Quando a primeira existir, a linha aparece sozinha e abre a grade, com visualizador e link direto (`#hub`, `#rds` etc.). A lista fica no bloco **EDITE AQUI** do `<script>`.
-- **QR code:** `assets/qr.svg` aponta para esta página. Se o endereço mudar, gere outro.
+No começo do `<script>` do `index.html`, no bloco **EDITE AQUI**:
+
+- `ELEICAO`: o cartão da eleição, com rótulo, título, nota, `dias` (AAAA-MM-DD), `abre`/`fecha` (horário de Brasília) e `dica`. O dia de hoje fica em laranja, os dias que já passaram ficam apagados e a linha de baixo diz se a votação começa, está aberta ou reabre. O cartão some sozinho depois do horário de fechamento do último dia. `ELEICAO = null` esconde o cartão. No título, o trecho entre `*asteriscos*` fica marcado em laranja.
+- `CARTA`: suba o PDF na raiz do repositório com o nome exato `carta-proposta.pdf` e a linha da carta-programa liga sozinha.
+- `PROPOSTAS`: o hub de propostas. Ponha a imagem na pasta `propostas/` com o nome indicado (`rds`, `tecnologia`, `negocios`, `social`, em `.png`, `.jpg`, `.jpeg` ou `.webp`). Quando a primeira existir, a linha "Propostas por tema" aparece e abre a grade, com visualizador e link direto (`#hub`, `#rds`, `#tecnologia`, `#negocios`, `#social`). Veja `propostas/LEIA-ME.md`.
+
+Os outros links ficam escritos direto no HTML: o bloco amarelo do Fuja das P3 (`<a class="destaque">`) e os dois `<section class="grupo">`. Para trocar um link, mude o `href`; para trocar o texto, mude o `<b>` e o `<span>` da linha.
+
+`assets/qr.svg` é o QR code desta página. Se o endereço mudar, gere outro.
 
 ## Recursos
 
