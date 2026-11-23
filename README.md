@@ -10,7 +10,7 @@ No começo do `<script>` do `index.html`, no bloco **EDITE AQUI**:
 - `CARTA`: suba o PDF na raiz do repositório com o nome exato `carta-proposta.pdf` e a linha da carta-programa liga sozinha.
 - `PROPOSTAS`: o hub de propostas. Ponha a imagem na pasta `propostas/` com o nome indicado (`rds`, `tecnologia`, `negocios`, `social`, em `.png`, `.jpg`, `.jpeg` ou `.webp`). Quando a primeira existir, a linha "Propostas por tema" aparece e abre a grade, com visualizador e link direto (`#hub`, `#rds`, `#tecnologia`, `#negocios`, `#social`). Veja `propostas/LEIA-ME.md`.
 
-Os outros links ficam escritos direto no HTML: o bloco amarelo do Fuja das P3 (`<a class="destaque">`) e os dois `<section class="grupo">`. Para trocar um link, mude o `href`; para trocar o texto, mude o `<b>` e o `<span>` da linha.
+Os outros links ficam escritos direto no HTML: o bloco amarelo do Fuja das P3 (`<a class="destaque">`) e o painel `<section class="grupo">`. Para trocar um link, mude o `href`; para trocar o texto, mude o `<b>` e o `<span>` da linha.
 
 `assets/qr.svg` é o QR code desta página. Se o endereço mudar, gere outro.
 
