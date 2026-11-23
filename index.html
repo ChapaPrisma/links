@@ -184,8 +184,6 @@ footer a { color: var(--texto2); }
     <h1 class="lema"><span class="l"><span>Diferentes</span></span><span class="l"><span>perspectivas.</span></span><span class="l"><span>Uma só <em>Poli.</em></span></span></h1>
   </header>
 
-  <section class="eleicao" id="eleicao" aria-label="Datas da nova eleição do Grêmio" hidden></section>
-
   <a class="destaque" href="https://chapaprisma.github.io/fuja-das-p3/" data-conta="fuja-das-p3">
     <span class="d-tit">Fuja das P3</span>
     <span class="d-txt">O que cai, provas resolvidas e simulado de 16 matérias do 2º e do 4º semestre.</span>
@@ -223,6 +221,8 @@ footer a { color: var(--texto2); }
     <button class="btn" id="compartilhar" type="button"><svg viewBox="0 0 24 24"><path d="M12 3v12M7 8l5-5 5 5"/><path d="M5 13v6a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-6"/></svg>Compartilhar</button>
     <button class="btn" id="mostra-qr" type="button" aria-haspopup="dialog"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 14h3v3h-3zM20 14v.01M14 20h.01M17 20h4v-3"/></svg>QR code</button>
   </div>
+
+  <section class="eleicao" id="eleicao" aria-label="Datas da nova eleição do Grêmio" hidden></section>
 
   <footer>
     Siga em <a href="https://www.instagram.com/prisma.poli/" rel="noopener" data-conta="instagram-rodape">@prisma.poli</a>
@@ -346,7 +346,7 @@ document.addEventListener("click", (e) => { const a = e.target.closest("[data-co
       .to(".ponto", { scale: 1.7, duration: 0.22, repeat: 1, yoyo: true, ease: "power1.inOut" }, "<")
       .from(".lema .l > span", { yPercent: 110, duration: 0.8, stagger: 0.09 }, "<0.15")
       .from(".quem", { autoAlpha: 0, y: 8, duration: 0.5 }, "<0.1")
-      .from([".eleicao", ".destaque", ".grupo", ".acoes", "footer"], { autoAlpha: 0, y: 16, duration: 0.55, stagger: 0.07 }, "<0.25");
+      .from([".destaque", ".grupo", ".acoes", ".eleicao", "footer"], { autoAlpha: 0, y: 16, duration: 0.55, stagger: 0.07 }, "<0.25");
     raiz.classList.remove("anima");   // os from() já deixaram tudo no estado inicial
   });
 })();
