@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Chapa Prisma · links</title>
-<meta name="description" content="Todos os links da Chapa Prisma, Grêmio Politécnico: Instagram, site da chapa, site do Grêmio, carta-programa e hub de propostas.">
+<meta name="description" content="Todos os links da Chapa Prisma, Grêmio Politécnico: datas da nova eleição, Instagram, site da chapa, Fuja das P3, site do Grêmio, carta-programa e hub de propostas.">
 <meta name="theme-color" content="#0F2347">
 <link rel="icon" href="assets/simbolo.svg" type="image/svg+xml">
 <meta property="og:type" content="website">
@@ -32,6 +32,29 @@ h1 { font-size: 15px; font-weight: 400; color: rgba(255,255,255,.72); margin-top
 .lema em { font-style: normal; color: var(--laranja); }
 .aviso { display: none; margin-top: 20px; padding: 12px 16px; border-radius: 14px; background: var(--amarelo); color: var(--azul); font-weight: 700; font-size: 15px; text-align: center; line-height: 1.35; }
 .aviso.on { display: block; }
+/* bloco da eleição: mesmo visual do panfleto (fundo claro, "de novo" em laranja, dias em azul) */
+.eleicao { display: none; margin-top: 22px; padding: 16px 16px 14px; border-radius: 18px; background: var(--off); color: var(--azul); text-align: left; box-shadow: 0 12px 32px rgba(0,0,0,.28); }
+.eleicao.on { display: block; }
+.el-rot { display: block; font-size: 11.5px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: #C2410C; }
+.el-tit { display: block; margin-top: 6px; font-size: 25px; line-height: 1.12; letter-spacing: -0.03em; }
+.el-tit mark { background: var(--laranja); color: var(--azul); padding: 0 6px; border-radius: 4px; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+.el-nota { margin-top: 6px; font-size: 13.5px; color: #4A5468; line-height: 1.35; }
+.dias { list-style: none; margin-top: 14px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+.dias li { display: flex; flex-direction: column; align-items: center; padding: 8px 4px 7px; border-radius: 12px; background: var(--azul); color: #fff; line-height: 1.05; }
+.dias li span { font-size: 11px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; opacity: .75; }
+.dias li b { font-size: 26px; letter-spacing: -0.02em; margin-top: 3px; }
+.dias li small { font-size: 11.5px; opacity: .75; margin-top: 2px; }
+.dias li.hoje { background: var(--laranja); color: var(--azul); }
+.dias li.hoje span, .dias li.hoje small { opacity: 1; }
+.dias li.foi { opacity: .32; }
+.el-info { margin-top: 12px; display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: 14.5px; font-weight: 700; }
+.el-info span { display: inline-flex; align-items: center; gap: 6px; }
+.el-info svg { width: 17px; height: 17px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; flex: none; }
+.el-status { margin-top: 12px; padding-top: 11px; border-top: 1px solid rgba(15,35,71,.12); display: flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 700; }
+.el-status i { width: 9px; height: 9px; border-radius: 50%; background: var(--laranja); flex: none; }
+.el-status.aberta i { box-shadow: 0 0 0 0 rgba(255,107,61,.6); animation: pulso 1.8s infinite; }
+@keyframes pulso { 70% { box-shadow: 0 0 0 8px rgba(255,107,61,0); } 100% { box-shadow: 0 0 0 0 rgba(255,107,61,0); } }
+.txt b .tag { display: inline-block; margin: 0 0 0 7px; vertical-align: 2px; padding: 2px 7px; border-radius: 999px; background: var(--laranja); color: var(--azul); font-size: 10.5px; line-height: 1.4; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
 nav { margin-top: 26px; display: flex; flex-direction: column; gap: 12px; }
 .link { display: flex; align-items: center; gap: 14px; width: 100%; min-height: 72px; padding: 12px 16px 12px 12px; border-radius: 18px; border: 1.5px solid var(--linha);
   background: rgba(255,255,255,.06); color: #fff; text-decoration: none; font: inherit; text-align: left; cursor: pointer;
@@ -59,7 +82,9 @@ nav { margin-top: 26px; display: flex; flex-direction: column; gap: 12px; }
 .proposta:hover { border-color: rgba(255,255,255,.22); }
 .proposta:active { transform: scale(.98); }
 .proposta img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: top; }
-.proposta .tampa { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(10,24,51,0) 35%, rgba(10,24,51,.85) 100%); }
+.proposta.com-img { padding: 0; }
+.proposta .rotulo { position: relative; padding: 9px 12px 10px; background: var(--azul); border-top: 1px solid rgba(255,255,255,.12); }
+.proposta .rotulo b { display: block; font-size: 14.5px; }
 .proposta .ic { width: 40px; height: 40px; margin-bottom: auto; position: relative; }
 .proposta .ic svg { width: 22px; height: 22px; }
 .proposta b { position: relative; font-size: 15.5px; line-height: 1.15; letter-spacing: -0.01em; }
@@ -88,7 +113,7 @@ footer a { color: rgba(255,255,255,.75); }
 .pontos { display: flex; gap: 7px; }
 .pontos i { width: 8px; height: 8px; border-radius: 50%; background: rgba(255,255,255,.3); }
 .pontos i.on { background: var(--amarelo); width: 22px; border-radius: 4px; }
-@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
 @media (min-width: 560px) { main { padding-top: 64px; } .lema { font-size: 30px; } }
 </style>
 </head>
@@ -100,6 +125,7 @@ footer a { color: rgba(255,255,255,.75); }
     <h1>Chapa para o Grêmio Politécnico</h1>
     <p class="lema">Diferentes perspectivas.<br>Uma só <em>Poli.</em></p>
     <div class="aviso" id="aviso" role="status"></div>
+    <section class="eleicao" id="eleicao" aria-label="Datas da eleição do Grêmio"></section>
   </header>
   <nav id="links" aria-label="Links da Chapa Prisma"></nav>
   <div class="acoes">
@@ -122,22 +148,35 @@ footer a { color: rgba(255,255,255,.75); }
 
 <script>
 // ===================== EDITE AQUI =====================
-// Aviso no topo (ex.: datas da nova eleição). Vazio = escondido.
+// Aviso no topo (faixa amarela de texto livre). Vazio = escondido.
 const AVISO = "";
+// Eleição: bloco com os dias de votação. Destaca o dia de hoje e some sozinho
+// depois do horário de fechamento do último dia. ELEICAO = null esconde o bloco.
+// No título, o trecho entre *asteriscos* fica marcado em laranja.
+const ELEICAO = {
+  rotulo: "Nova eleição do Grêmio",
+  titulo: "Votou? Vote *de novo.*",
+  nota: "A votação de 10 a 12/11 foi anulada. Quem já votou precisa votar outra vez.",
+  dias: ["2026-11-24", "2026-11-25", "2026-11-26"], // AAAA-MM-DD
+  abre: "08:00", fecha: "18:00",                     // horário de Brasília
+  dica: "NUSP, e-Card ou carteirinha",
+};
 // Links principais. url vazia = aparece como "em breve".
+// Com `arquivo`, o cartão fica "em breve" até esse arquivo existir no repositório e então liga sozinho.
 const LINKS = [
   { id: "instagram", titulo: "Instagram", sub: "@prisma.poli · novidades e bastidores", url: "https://www.instagram.com/prisma.poli/", icone: "instagram", cor: "#FF6B3D" },
   { id: "site", titulo: "Site da chapa", sub: "Quem somos, propostas e como votar", url: "https://chapaprisma.github.io/site_chapa/", icone: "prisma", cor: "#FFC845" },
+  { id: "fuja-p3", titulo: "Fuja das P3", tag: "novo", sub: "P3 antigas resolvidas, guia do que cai e simulado", url: "https://chapaprisma.github.io/fuja-das-p3/", icone: "prova", cor: "#FF6B3D" },
   { id: "gremio", titulo: "Site do Grêmio", sub: "Salas livres, montador de grade, bandejões e mais", url: "https://chapaprisma.github.io/Site_gremio_poli/", icone: "predio", cor: "#C9A7FF" },
-  { id: "carta", titulo: "Carta-programa", sub: "Todas as nossas propostas, por extenso", url: "", icone: "carta", cor: "#F8F6F2" },
+  { id: "carta", titulo: "Carta-programa", sub: "Todas as nossas propostas, por extenso", url: "", arquivo: "carta-proposta.pdf", icone: "carta", cor: "#F8F6F2" },
   { id: "hub", titulo: "Hub de propostas", sub: "As propostas por tema, em imagens", hub: true, icone: "grade", cor: "#FFC845" },
 ];
-// Hub de propostas: ponha a imagem na pasta propostas/ com o nome indicado e ela aparece sozinha.
+// Hub de propostas: ponha a imagem na pasta propostas/ com o nome indicado (.png, .jpg, .jpeg ou .webp) e ela aparece sozinha.
 const PROPOSTAS = [
-  { id: "rds", titulo: "RDs", sub: "Representação discente", img: "propostas/rds.png", icone: "megafone", cor: "#C9A7FF" },
-  { id: "tecnologia", titulo: "Tecnologia e Inovação", sub: "Digitalização e ferramentas", img: "propostas/tecnologia.png", icone: "chip", cor: "#FFC845" },
-  { id: "negocios", titulo: "Negócios", sub: "Triedro, Copiadora, Poliglota", img: "propostas/negocios.png", icone: "loja", cor: "#FF6B3D" },
-  { id: "social", titulo: "Social e AEXs", sub: "Projetos sociais e extensão", img: "propostas/social.png", icone: "coracao", cor: "#F8F6F2" },
+  { id: "rds", titulo: "RDs", sub: "Representação discente", img: "propostas/rds", icone: "megafone", cor: "#C9A7FF" },
+  { id: "tecnologia", titulo: "Tecnologia e Inovação", sub: "Digitalização e ferramentas", img: "propostas/tecnologia", icone: "chip", cor: "#FFC845" },
+  { id: "negocios", titulo: "Negócios", sub: "Triedro, Copiadora, Poliglota", img: "propostas/negocios", icone: "loja", cor: "#FF6B3D" },
+  { id: "social", titulo: "Social e AEXs", sub: "Projetos sociais e extensão", img: "propostas/social", icone: "coracao", cor: "#F8F6F2" },
 ];
 // ======================================================
 
@@ -146,6 +185,7 @@ const ICONES = {
   prisma: '<path d="M6 3v18M6 3l13 8-13 8"/>',
   predio: '<path d="M3 9l9-6 9 6"/><path d="M5 10v9M9.5 10v9M14.5 10v9M19 10v9M3 21h18"/>',
   carta: '<path d="M7 3h7l5 5v13H7z"/><path d="M14 3v5h5M10 13h6M10 17h6"/>',
+  prova: '<rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 2.5h6v3H9z"/><path d="M9 13l2.2 2.2L15.5 11"/>',
   grade: '<rect x="3" y="3" width="7.5" height="7.5" rx="1.5"/><rect x="13.5" y="3" width="7.5" height="7.5" rx="1.5"/><rect x="3" y="13.5" width="7.5" height="7.5" rx="1.5"/><rect x="13.5" y="13.5" width="7.5" height="7.5" rx="1.5"/>',
   megafone: '<path d="M3 10v4h3l8 5V5L6 10z"/><path d="M18 9c1.5 1.5 1.5 4.5 0 6"/>',
   chip: '<rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4"/>',
@@ -171,13 +211,63 @@ LINKS.forEach((l) => {
     b.addEventListener("click", () => abreHub(b.getAttribute("aria-expanded") !== "true"));
     return;
   }
-  const el = document.createElement(l.url ? "a" : "div");
-  el.className = "link" + (l.url ? "" : " breve");
-  if (l.url) { el.href = l.url; el.rel = "noopener"; el.addEventListener("click", () => conta(l.id)); }
-  else el.setAttribute("aria-disabled", "true");
-  el.innerHTML = `${ic(l.icone, l.cor)}<span class="txt"><b>${l.titulo}</b><span>${l.sub}</span></span>` + (l.url ? `<span class="fim">${SETA}</span>` : `<span class="selo">em breve</span>`);
+  const el = cartao(l, l.url);
   nav.appendChild(el);
+  // cartão com arquivo: liga sozinho quando o arquivo existir no repositório
+  if (!l.url && l.arquivo) {
+    fetch(l.arquivo, { method: "HEAD", cache: "no-store" }).then((r) => { if (r.ok) el.replaceWith(cartao(l, l.arquivo)); }).catch(() => {});
+  }
 });
+function cartao(l, url) {
+  const el = document.createElement(url ? "a" : "div");
+  el.className = "link" + (url ? "" : " breve");
+  if (url) { el.href = url; el.rel = "noopener"; el.addEventListener("click", () => conta(l.id)); }
+  else el.setAttribute("aria-disabled", "true");
+  const tag = l.tag ? `<span class="tag">${l.tag}</span>` : "";
+  el.innerHTML = `${ic(l.icone, l.cor)}<span class="txt"><b>${l.titulo}${tag}</b><span>${l.sub}</span></span>` + (url ? `<span class="fim">${SETA}</span>` : `<span class="selo">em breve</span>`);
+  return el;
+}
+
+// eleição: dias com "hoje" em destaque e status (começa / aberta / reabre); some depois do último dia
+const SEMANA = ["dom", "seg", "ter", "qua", "qui", "sex", "sáb"];
+const MESES = ["jan", "fev", "mar", "abr", "mai", "jun", "jul", "ago", "set", "out", "nov", "dez"];
+const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const hora = (h) => { const [hh, mm] = h.split(":"); return +hh + "h" + (mm !== "00" ? mm : ""); };
+const quando = (dia, h) => Date.parse(`${dia}T${h}:00-03:00`);
+const diaSP = (ms) => new Date(ms - 3 * 3600e3).toISOString().slice(0, 10);
+function eleicao() {
+  const box = document.getElementById("eleicao"), E = ELEICAO;
+  if (!E || !E.dias || !E.dias.length) { box.classList.remove("on"); return; }
+  const agora = Date.now();
+  if (agora > quando(E.dias[E.dias.length - 1], E.fecha)) { box.classList.remove("on"); return; }
+  const hoje = diaSP(agora), amanha = diaSP(agora + 864e5);
+  const prox = E.dias.findIndex((d) => agora < quando(d, E.fecha)); // dia atual ou o próximo
+  const chips = E.dias.map((d, i) => {
+    const dt = new Date(d + "T12:00:00Z");
+    const eHoje = d === hoje && i >= prox; // dia de hoje que ainda não fechou
+    const cls = i < prox ? "foi" : eHoje ? "hoje" : "";
+    return `<li class="${cls}"><span>${SEMANA[dt.getUTCDay()]}</span><b>${dt.getUTCDate()}</b><small>${eHoje ? "hoje" : MESES[dt.getUTCMonth()]}</small></li>`;
+  }).join("");
+  const d = E.dias[prox], ultimo = prox === E.dias.length - 1;
+  let status, aberta = false;
+  if (agora >= quando(d, E.abre)) { aberta = true; status = ultimo ? `Último dia · aberta até as ${hora(E.fecha)}` : `Votação aberta agora, até as ${hora(E.fecha)}`; }
+  else {
+    const dt = new Date(d + "T12:00:00Z");
+    const qual = d === hoje ? "hoje" : d === amanha ? "amanhã" : `${SEMANA[dt.getUTCDay()]}, ${dt.getUTCDate()}/${dt.getUTCMonth() + 1},`;
+    status = (prox === 0 ? "Começa " : ultimo ? "Último dia: abre " : "Reabre ") + `${qual} às ${hora(E.abre)}`;
+  }
+  const titulo = esc(E.titulo).replace(/\*(.+?)\*/g, "<mark>$1</mark>");
+  const relogio = '<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>';
+  const cartaoId = '<svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="8.5" cy="11" r="2"/><path d="M5.5 16c.6-1.6 1.7-2.4 3-2.4s2.4.8 3 2.4M14 10h4M14 14h3"/></svg>';
+  box.innerHTML = `<span class="el-rot">${esc(E.rotulo)}</span><b class="el-tit">${titulo}</b>` +
+    (E.nota ? `<p class="el-nota">${esc(E.nota)}</p>` : "") +
+    `<ol class="dias">${chips}</ol>` +
+    `<p class="el-info"><span>${relogio}Das ${hora(E.abre)} às ${hora(E.fecha)}</span>` + (E.dica ? `<span>${cartaoId}${esc(E.dica)}</span>` : "") + `</p>` +
+    `<p class="el-status${aberta ? " aberta" : ""}"><i></i>${status}</p>`;
+  box.classList.add("on");
+}
+eleicao();
+setInterval(eleicao, 60e3);
 
 // hub: cada proposta vira "pronta" quando a imagem existe
 const hub = document.getElementById("hub");
@@ -187,15 +277,24 @@ PROPOSTAS.forEach((p) => {
   b.type = "button"; b.className = "proposta breve"; b.disabled = true;
   b.innerHTML = `${ic(p.icone, p.cor)}<b>${p.titulo}</b><small>em breve</small>`;
   hub.appendChild(b);
-  const img = new Image();
-  img.onload = () => {
-    b.classList.remove("breve"); b.disabled = false;
-    b.innerHTML = `<img src="${p.img}" alt=""><span class="tampa"></span><b>${p.titulo}</b><small>${p.sub}</small>`;
-    p.pronta = true; prontas.push(p); prontas.sort((x, y) => PROPOSTAS.indexOf(x) - PROPOSTAS.indexOf(y));
-    b.addEventListener("click", () => abreVis(p.id));
-    if (location.hash === "#" + p.id) { abreHub(true); abreVis(p.id); }
+  // tenta cada extensão até achar a imagem
+  const EXTS = [".png", ".jpg", ".jpeg", ".webp"];
+  const tenta = (k) => {
+    if (k >= EXTS.length) return;
+    const img = new Image();
+    img.onload = () => {
+      p.src = p.img + EXTS[k];
+      b.classList.remove("breve"); b.classList.add("com-img"); b.disabled = false;
+      b.setAttribute("aria-label", `${p.titulo}: ${p.sub}`);
+      b.innerHTML = `<img src="${p.src}" alt=""><span class="rotulo"><b>${p.titulo}</b></span>`;
+      p.pronta = true; prontas.push(p); prontas.sort((x, y) => PROPOSTAS.indexOf(x) - PROPOSTAS.indexOf(y));
+      b.addEventListener("click", () => abreVis(p.id));
+      if (location.hash === "#" + p.id) { abreHub(true); abreVis(p.id); }
+    };
+    img.onerror = () => tenta(k + 1);
+    img.src = p.img + EXTS[k];
   };
-  img.src = p.img;
+  tenta(0);
 });
 function abreHub(on) {
   const b = document.getElementById("hub-botao");
@@ -217,7 +316,7 @@ function mostra() {
   const p = prontas[atual];
   document.getElementById("vis-titulo").textContent = p.titulo;
   document.getElementById("vis-sub").textContent = `Propostas · ${atual + 1} de ${prontas.length}`;
-  document.getElementById("vis-img").innerHTML = `<img src="${p.img}" alt="Propostas da Prisma: ${p.titulo}">`;
+  document.getElementById("vis-img").innerHTML = `<img src="${p.src}" alt="Propostas da Prisma: ${p.titulo}">`;
   document.getElementById("vis-pontos").innerHTML = prontas.map((_, i) => `<i class="${i === atual ? "on" : ""}"></i>`).join("");
   const um = prontas.length < 2; document.getElementById("vis-ant").style.visibility = um ? "hidden" : ""; document.getElementById("vis-prox").style.visibility = um ? "hidden" : "";
   history.replaceState(null, "", location.pathname + "#" + p.id);
