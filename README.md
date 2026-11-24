@@ -7,7 +7,7 @@ Página de links da Chapa Prisma: https://chapaprisma.github.io/links/
 No começo do `<script>` do `index.html`, no bloco **EDITE AQUI**:
 
 - `ELEICAO`: o cartão da eleição, com rótulo, título, nota, `dias` (AAAA-MM-DD), `abre`/`fecha` (horário de Brasília) e `dica`. O dia de hoje fica em laranja, os dias que já passaram ficam apagados e a linha de baixo diz se a votação começa, está aberta ou reabre. O cartão some sozinho depois do horário de fechamento do último dia. `ELEICAO = null` esconde o cartão. No título, o trecho entre `*asteriscos*` fica marcado em laranja.
-- `CARTA`: suba o PDF na raiz do repositório com o nome exato `carta-proposta.pdf` e a linha da carta-programa liga sozinha.
+- `CARTA`: suba o PDF na raiz do repositório com o nome exato `carta-programa.pdf` e a linha da carta-programa liga sozinha.
 - `PROPOSTAS`: o hub de propostas. Ponha a imagem na pasta `propostas/` com o nome indicado (`rds`, `tecnologia`, `negocios`, `social`, em `.png`, `.jpg`, `.jpeg` ou `.webp`). Quando a primeira existir, a linha "Propostas por tema" aparece e abre a grade, com visualizador e link direto (`#hub`, `#rds`, `#tecnologia`, `#negocios`, `#social`). Veja `propostas/LEIA-ME.md`.
 
 Os outros links ficam escritos direto no HTML: o bloco amarelo do Fuja das P3 (`<a class="destaque">`) e o painel `<section class="grupo">`. Para trocar um link, mude o `href`; para trocar o texto, mude o `<b>` e o `<span>` da linha.
